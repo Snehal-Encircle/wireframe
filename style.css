@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@layer base {
+    * {
+        @apply m-0 p-0 box-border font-body
+    }
+
+    body::-webkit-scrollbar {
+      width: 5px;
+    }
+     
+    body::-webkit-scrollbar-track {
+      box-shadow: outset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+     
+    body::-webkit-scrollbar-thumb {
+      background-color: skyBlue;
+      border-radius: 50%;
+      outline: 1px solid transparent;
+    }
+
+    body { 
+        @apply font-normal -tracking-[1.5%] text-black
+    }
+    h1 {
+        @apply text-25 md:text-28 md:leading-32 xl:text-56 xl:leading-80 text-center -tracking-[0.015em] smscreen:px-20
+    }
+    h2 {
+        @apply text-30 leading-40 md:text-38 lg:text-48 lg:leading-72
+    }
+    h3 {
+        @apply font-bold text-20 leading-30 lg:text-24 lg:leading-36
+    }
+    p {
+        @apply text-18 leading-30 pt-3
+    }
+}
+
+@layer components {
+    .container-fluid {
+        @apply px-20 md:px-40 lg:px-80
+    }
+    .container-xl {
+        @apply px-60 md:px-100 xl:px-160
+    }
+    .btn {
+        @apply text-15 leading-18 font-medium py-[11px] px-[42px] rounded-6
+    }
+    .btn-outline {
+        @apply bg-white hover:bg-skyBlue text-skyBlue hover:text-white border border-skyBlue
+    }
+    .btn-blue {
+        @apply bg-skyBlue hover:bg-blue-100 text-white border border-transparent
+    }
+    .item-center {
+        @apply flex justify-center items-center
+    }
+    .heading {
+        @apply text-20 leading-30 lg:text-25 lg:leading-37 xl:text-36 xl:leading-50
+    }
+    .title-black {
+        @apply font-bold text-15 leading-6 -tracking-[0.015em] text-black
+    }
+    .social-img {
+        @apply inline-block relative w-[44px] h-[44px] overflow-hidden
+    }
+    .btn-px {
+        @apply px-[50px] py-[15px]
+    }
+}
+
+@layer utilities {
+    .navigation ul li {
+        @apply font-medium text-skyBlue hover:text-black text-15 leading-18 mr-6 xl:mr-10 lgscreen:m-6 lgscreen:justify-center lgscreen:flex
+    }
+    .banner .banner-inner h1 {
+        @apply lgscreen:px-5
+    }
+    .playiocn img {
+        @apply w-80 lg:w-100 pb-20 lg:pb-80
+    }
+    .grid-content .content {
+        @apply pt-20 lg:pt-60
+    }
+    .snap-grid button {
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+    }
+    .description {
+        @apply lg:pt-3
+    }
+    .grid-content .description {
+        @apply pb-3 lg:pb-32
+    }
+    .zigzag .zigzag-image {
+        @apply pt-[58.67%] relative w-full inline-block align-top overflow-hidden
+    }
+    .zigzag .zigzag-image img {
+        @apply inset-0 block h-full w-full object-cover absolute
+    }
+    .zigzag .zigzag-content h3{
+        @apply lgscreen:pt-20
+    }
+    /* good slider */
+    .good-slider .swiper-button-prev:after,.insta-slider .swiper-button-prev:after {
+        content: ''!important;
+    }
+    .good-slider .swiper-button-next:after,.insta-slider .swiper-button-next:after {
+        content: ''!important;
+    }
+    .good-slider .swiper-slide {
+        @apply relative
+    }
+    .good-slider .slider-image {
+        @apply relative pt-[43.9%]
+    }
+    .good-slider .swiper-slide img {
+        @apply inset-0 block h-full w-full object-cover absolute
+    }
+    .good-slider .slider-arrow {
+        @apply inset-0 block h-full w-full object-cover absolute
+    }
+    /* guest-slider */
+    .guest-slider .swiper-button-prev {
+        @apply left-[4%] text-white
+    }
+    .guest-slider .swiper-button-next {
+        @apply right-[4%] text-white
+    }
+    .guest-slider .swiper-button-next:after, .guest-slider .swiper-button-prev:after{
+        @apply text-13 lg:text-18
+    }
+
+    /* saxon-slider */
+    .saxon-slider .swiper-button-prev {
+        @apply left-[11.5%] text-white
+    }
+    .saxon-slider .swiper-button-next {
+        @apply right-[11.5%] text-white
+    }
+    .saxon-slider .swiper-button-next, .saxon-slider .swiper-button-prev{
+        @apply text-18 bg-gold p-[22px] xl:p-[29px] rounded-full top-[34%]
+    }
+    .saxon-slider .swiper-button-next:after,.saxon-slider .swiper-button-prev:after {
+        @apply text-13 lg:text-18
+    }
+
+    .saxon-slider .saxon-image {
+        @apply pt-[58.6%] relative w-full inline-block align-top overflow-hidden
+    }
+    .saxon-slider .saxon-image img {
+        @apply inset-0 block h-full w-full object-cover absolute
+    }
+    .saxon-slider .slide-content h3 {
+        @apply font-slider font-medium text-18 leading-[24.59px] tracking-[3px] text-gold uppercase pt-20 lg:pt-30
+    }
+    .saxon-slider .slide-content p {
+        @apply font-slider font-normal text-15 leading-6 tracking-wide text-gray-200
+    }
+    .saxon-slider .swiper-header h2 {
+        @apply font-slider font-medium text-28 leading-[38.25px] tracking-[3px] text-gold uppercase text-center
+    }
+    .saxon-slider .swiper-header p{
+        @apply font-slider font-normal text-15 leading-6 text-center tracking-[2px] text-gray-200 py-10px lg:pb-49
+    }
+    .explore-btn{
+        @apply font-slider cursor-pointer text-gold item-center justify-start text-15 leading-[20.49px] font-medium relative uppercase
+    }
+    .explore-btn span {
+        @apply text-gold bg-gold h-[1px] ml-3 w-[50px] duration-500
+    }
+    .saxon-slider .explore-btn:hover span,.saxon-slider a {
+        @apply w-20 duration-500
+    }
+    .explore-btn{
+        @apply hover:transition-transform duration-500
+    }
+    /* insta slider */
+    .insta-slider .next,.insta-slider .prev{
+        width: calc(var(--swiper-navigation-size)/ 13 * 24);
+    }
+    .insta-slider .slider-head h2 {
+        @apply font-slider font-medium text-28 leading-[38.25px] text-left align-top text-gold tracking-[2px] pb-20 lg:pb-45 uppercase
+    }
+    .insta-slider .swiper-slide img{
+        @apply w-full aspect-square
+    } 
+
+    /* desc-slider */
+    .desc-slider .swiper-button-prev {
+        @apply left-[4.79%] text-white
+    }
+    .desc-slider .swiper-button-next {
+        @apply right-[4.59%] text-white
+    }
+    .desc-slider .swiper-button-next, .desc-slider .swiper-button-prev{
+        @apply text-18 bg-gold p-[22px] xl:p-[29px] rounded-full top-[45%]
+    }
+    .desc-slider .swiper-button-next:after,.desc-slider .swiper-button-prev:after {
+        @apply text-13 lg:text-18
+    }
+    .desc-slider .swiper-wrapper {
+        @apply relative
+    }
+    .desc-slider .swiper-slide {
+       @apply pt-[55.83%] xl:pt-[15.83%] relative w-full inline-block align-top overflow-hidden
+    }
+    .desc-slider .swiper-slide img {
+        @apply inset-0 block h-full w-full object-cover absolute
+    }
+    @media (min-width:1024px) {
+        .desc-slider .swiper-slide-active {
+            transform: scale(1.5);
+        }
+        .desc-slider .swiper-slide-prev,.desc-slider .swiper-slide-next{
+            transform: scaleX(0.5);
+        }
+    }
+    @media (min-width:1280px) {
+        .desc-slider .swiper-slide-active {
+            transform: scaleX(1.2);
+            margin-left: 36px !important;
+        }
+        .desc-slider .swiper-slide-prev,.desc-slider .swiper-slide-next{
+            transform: scaleX(0.9);
+        }
+        .desc-slider .swiper-slide-prev {
+            margin-right: 28px !important;
+            margin-left: -25px;
+        }
+        .desc-slider .swiper-slide-next {
+            margin-right: 10px !important;
+            margin-left: 27px;
+        }
+    }
+}

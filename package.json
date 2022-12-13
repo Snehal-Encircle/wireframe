@@ -1,0 +1,30 @@
+{
+  "name": "wireframe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vite --host"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Snehal-Encircle/photo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Snehal-Encircle/photo/issues"
+  },
+  "homepage": "https://github.com/Snehal-Encircle/photo#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.17",
+    "tailwindcss": "^3.1.8",
+    "vite": "^3.1.7"
+  },
+  "dependencies": {
+    "flowbite": "^1.5.3"
+  }
+}
